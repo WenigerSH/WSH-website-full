@@ -1,0 +1,195 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+    Clients
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <header class="page-header">
+
+        <h1 class="page-title">Our clients, our partners, our friends</h1>
+        {#
+        <ul id="portfolio-items-filter">
+
+            <li>Showing</li>
+            <li><a data-categories="*">All</a></li>
+            <li><a data-categories="animation">Animation</a></li>
+            <li><a data-categories="design">Design</a></li>
+            <li><a data-categories="illustration">Illustration</a></li>
+            <li><a data-categories="photography">Photography</a></li>
+            <li><a data-categories="web">Web</a></li>
+
+        </ul><!-- end #portfolio-items-filter -->
+        #}
+    </header><!-- end .page-header -->
+
+    <section id="portfolio-items" class="clearfix">
+
+    <article class="one-fourth" data-categories="illustration design">
+
+        <a href="#bbcomm" class="inline-html" title="BBcomm from Derbyshire, England">
+            <img src="{{ asset('bundles/wshwebsite/img/client_logos/bbcomm.png') }}" alt="BBcomm logo">
+        </a>
+
+        <a href="#bbcomm" class="project-meta">
+            <h5 class="title">BBcomm</h5>
+            <span class="categories">Derbyshire, England</span>
+        </a>
+        <div style="display:none">
+            <div id="bbcomm">
+                <div class="one-fourth">
+                    <img src="{{ asset('bundles/wshwebsite/img/client_pictures/bbcomm_1.jpg') }}" alt="Ewa James">
+                    <p class="caption">
+                        Ewa James<br>
+                        BBcomm
+                    </p>
+                </div>
+                <div class="one-fourth">
+                    <img src="{{ asset('bundles/wshwebsite/img/client_pictures/bbcomm_2.jpg') }}" alt="Warren Gaskell">
+                    <p class="caption">
+                        Warren Gaskell<br>
+                        BBcomm
+                    </p>
+                </div>
+                <div class="one-fourth last">
+                    <p>
+                        In BBcomm, a Marketing Agency based in UK, we work with Ewa James and Warren Gaskell on following projects:
+                    </p>
+                    <ul>
+                        <li><em>UPS Logistics</em> (internal content system and consultation)</li>
+                        <li><a href="http://www.interaktywne.info"><em>interaktywne.info</em></a>, a BBcomm internal project</li>
+                    </ul>
+                    <p>
+                        Ewa and Warren are great. We love to work with them.
+                        They are always full of understanding, patience and experience.
+                        Also, they know the best places to eat in town (well, at least when you are in Brussels).
+                    </p>
+                    <ul>
+                        <li><a href="http://www.bbcomm.co.uk/">Visit BBcomm website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end! client description modal div -->
+    </article><!-- end .one-fourth (Altered) -->
+
+    <article class="one-fourth" data-categories="illustration photography">
+
+        <a href="#empinars" class="inline-html" title="Empinars based in Stockholm, Sweden">
+            <img src="{{ asset('bundles/wshwebsite/img/client_logos/empinars.png') }}" alt="Empinars logo">
+        </a>
+
+        <a href="#empinars" class="project-meta">
+            <h5 class="title">Empinars</h5>
+            <span class="categories">Stockholm, Sweden</span>
+        </a>
+        <!-- client description -->
+        <div style="display:none">
+            <div id="empinars">
+                <div class="one-fourth">
+                    <img src="{{ asset('bundles/wshwebsite/img/client_pictures/empinars_1.jpg') }}" alt="Patrick Gustavsson">
+                    <p class="caption">
+                        Patrick Gustavsson<br>
+                        Empinars
+                    </p>
+                </div>
+                <div class="one-fourth last">
+                    <p>
+                        At Empinars, we work with the best Project Manager ever, Patrick Gustavsson.<br>
+                        Currently we are working with Patrick on:
+                    </p>
+                    <ul class="arrow">
+                        <li><em>Global Model Scouting</em>, web portal for models and model agencies</li>
+                    </ul>
+                    <p>
+                        There a lot to say about Patrick, he's a very professional and exact project leader with great deal of understanding.
+                        Except that, he loves <a href="http://en.wikipedia.org/wiki/%C5%BBurek">żurek</a>.
+                    </p>
+                    <ul>
+                        <li><a href="http://www.empinars.se/">Visit Empinars website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end! client description modal div -->
+
+    </article><!-- end .one-fourth (Snow Tower) -->
+
+    <article class="one-fourth" data-categories="illustration animation">
+
+        <a href="#brdesign" class="inline-html" title="BR-DESIGN based in Gdańsk, Poland">
+            <img src="{{ asset('bundles/wshwebsite/img/client_logos/br-design.png') }}" alt="BR-DESIGN logo">
+        </a>
+
+        <a href="#" class="project-meta">
+            <h5 class="title">BR-DESIGN</h5>
+            <span class="categories">Gdańsk, Poland</span>
+        </a>
+
+        <!-- client description -->
+        <div style="display:none">
+            <div id="brdesign">
+                <div class="one-fourth">
+                    <img src="{{ asset('bundles/wshwebsite/img/client_pictures/brdesign_1.jpg') }}" alt="Piotr Gocał">
+                    <p class="caption">
+                        Piotr Gocał<br>
+                        BR-DESIGN
+                    </p>
+                </div>
+                <div class="one-fourth last">
+                    <p>
+                        At BR-DESIGN, an Interactive Agency based in northern Poland,
+                        from with <strong>WENIGER</strong> had emerged, we work with it's CEO Piotr Gocał.
+                    </p>
+                    <p>
+                        We did a lot together in the past, and look forward in the future for more.<br>
+                        Our cooperation is on daily basis as we all had meet one day in BR-DESIGN.
+                    </p>
+                    <p>
+                        Piotr is very competent and ambitious project leader.
+                        He has all that it takes: professionalism, passion and quality, with are by the way BR-DESIGN core values.
+
+                    </p>
+                    <ul>
+                        <li><a href="http://www.br-design.pl/">Visit BR-DESIGN website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end! client description modal div -->
+
+    </article><!-- end .one-fourth (Not the end) -->
+    <article class="one-fourth last" data-categories="illustration animation">
+
+        <a href="#add-new" class="inline-html" title="Become a partner of WENIGER">
+            <img src="{{ asset('bundles/wshwebsite/img/client_logos/add_new.png') }}" alt="Become a partner">
+        </a>
+
+        <a href="#" class="project-meta">
+            <h5 class="title">Become a partner</h5>
+            <span class="categories">&nbsp;</span>
+        </a>
+
+        <!-- client description -->
+        <div style="display:none">
+            <div id="add-new">
+                <div class="one-third last">
+                    <p>
+                        <strong>WENIGER</strong> would gladly welcome you as our partner.
+                    </p>
+                    <p>
+                        If your business has a demand for our <a href="{{ path("services") }}">services</a> or you
+                        have any other business concept we are open for any inquiry.
+                    </p>
+                    <ul class="arrow">
+                        <li><a href="{{ path("contact") }}">Contact <strong>WENIGER</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end! client description modal div -->
+
+    </article><!-- end .one-fourth (End) -->
+
+    </section><!-- end #portfolio-items -->
+
+{% endblock %}

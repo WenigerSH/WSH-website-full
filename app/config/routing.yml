@@ -1,0 +1,5 @@
+wsh_website:
+    resource: "@WshWebsiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

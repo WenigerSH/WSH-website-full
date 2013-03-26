@@ -1,0 +1,116 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+    Services
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+<header class="page-header">
+
+		<h1 class="page-title">Services</h1>
+		<hr />
+		<h2 class="page-description">
+            Our Core Competencies.
+        </h2>
+		
+</header><!-- end .page-header -->
+	
+<div class="one-third">
+
+    <h3>Business analysis & consulations</h3>
+
+    <p>
+        We will optimize your business tasks to make them less time consuming, more efficient, smarter and much less frustrating.
+
+    </p>
+    <p>
+        We have experience in delivering solutions to business areas such as:
+    </p>
+    <ul class="arrow dotted">
+        <li>commerce</li>
+        <li>HR management</li>
+        <li>logistics</li>
+        <li>print on-demand</li>
+        <li>time tracking</li>
+        <li>electronic assembly</li>
+        <li>science publishing</li>
+        <li>business statistics and live calculations</li>
+        <li>warehouse management</li>
+    </ul>
+
+</div><!-- end .one-third -->
+
+<div class="one-third">
+
+    <h3>Web & mobile software development</h3>
+
+    <p>We design and develop web &amp; mobile software for business and marketing needs using cutting edge web technologies and management methodologies.</p>
+    <p>We are experts in delivering:</p>
+    <ul class="arrow dotted">
+        <li>bespoke information systems</li>
+        <li>advanced e-commerce platforms</li>
+        <li>mobile applications</li>
+        <li>web portals</li>
+        <li>B2B systems</li>
+        <li>intranets</li>
+    </ul>
+
+
+</div><!-- end .one-third -->
+
+<div class="one-third last">
+
+    <h3>Research and development</h3>
+
+    <p>
+        One of privileges when working with new technologies is fun from experiments and discovering new solutions.
+        World is changing very fast and front of technologies moves even faster but thanks to our passion we are able to be
+        at the head of that change.
+    </p>
+    <p>
+        We are researching new ideas and possibilities that will hopefully make world a better place.
+    </p>
+    <p>
+        Our current focus is directed at areas:
+    </p>
+    <ul class="arrow dotted">
+        <li>psychology & technology cooperation</li>
+        <li>artificial intelligence</li>
+        <li>synergy effects in information systems</li>
+    </ul>
+    <p>
+        <a title="30 days project information" href="{{ path("page", {slug: '30-days'}) }}">Read more</a> about our internal habit changing project for mobiles called <strong>30 days</strong>.
+    </p>
+</div><!-- end .one-third.last -->
+<hr>
+<div class="one-half">
+    <h5>Technologies</h5>
+    <p>
+        We use variety of technologies and we don't hide ourselves from anything that catches our eye:
+    </p>
+    <ul class="arrow dotted">
+        <li>PHP5 with Symfony2 framework as our main programming language</li>
+        <li>PhoneGap for developing mobile apps</li>
+        <li>More often we develop using modern JavaScript and we look further to it</li>
+    </ul>
+</div>
+<div class="one-half last">
+    <h5>Methodologies and QA</h5>
+    <p>
+        Our experience has enabled us to develop methods for quality assurance by the relevant project documentation,
+        team work, source code management and automated testing.
+        In QA you will never reach the final destination.
+        We continually evaluate our results and try to improve our processes and final product quality.<br>
+    </p>
+    <p>
+        Tools we use to achieve maximum quality possible:
+    </p>
+    <ul class="arrow dotted">
+        <li>First of all: trust and honesty</li>
+        <li>One of most mature ticketing system for controlling our team: <a href="http://www.atlassian.com/software/jira/overview">JIRA</a></li>
+        <li><a href="http://git-scm.com/">Git</a> with <a href="https://github.com/">GitHub</a> for source control</li>
+        <li><a href="http://behat.org/">Behat</a> for automated behavioral tests</li>
+        <li><a href="https://travis-ci.org/">Travis</a> for continuous integration</li>
+        <li><a href="http://newrelic.com/">New relic</a> for server monitoring</li>
+    </ul>
+</div>
+{% endblock %}
