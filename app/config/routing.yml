@@ -3,3 +3,6 @@ wsh_website:
     type:     annotation
     prefix:   /
 
+sonata_page_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
