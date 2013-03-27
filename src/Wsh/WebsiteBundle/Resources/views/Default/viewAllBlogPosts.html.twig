@@ -11,14 +11,14 @@
     <article class="entry clearfix">
 
         {% if post.getWebPath is not empty %}
-            <a href="/{{ post.getWebPath }}" title="{{ post.title }}" class="entry-image-link">
+            <a href="{{ path('blog_single', {slug: post.slug}) }}" title="{{ post.title }}" class="entry-image">
                 <img src="/{{ post.getWebPath }}" alt="Picture for blog entry {{ post.title }}" class="entry-image">
             </a>
         {% endif %}
 
         <div class="entry-body">
 
-            <a href="single-post.html">
+            <a href="{{ path('blog_single', {slug: post.slug}) }}">
                 <h1 class="title">{{ post.title }}</h1>
             </a>
 
@@ -33,10 +33,10 @@
         <div class="entry-meta">
 
             <ul>
-                <li><a href="single-post.html"><span class="post-format ">Permalink</span></a></li>
-                <li><span class="title">Posted:</span> <a href="#">Sep 17 2011</a></li>
-                <li><span class="title">Tags:</span> <a href="#">Standard</a></li>
-                <li><span class="title">Comments:</span> <a href="#">3</a></li>
+                <li><a href="{{ path('blog_single', {slug: post.slug}) }}"><span class="post-format ">Permalink</span></a></li>
+                <li><span class="title">Posted:</span> <a href="#">{{ post.createdAt | date("M d, Y") }}</a></li>
+                {#<li><span class="title">Tags:</span> <a href="#">Standard</a></li>#}
+                {#<li><span class="title">Comments:</span> <a href="#">3</a></li>#}
             </ul>
 
         </div><!-- end .entry-meta -->

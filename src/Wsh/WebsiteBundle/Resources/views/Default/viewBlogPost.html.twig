@@ -22,7 +22,7 @@
 
         <div class="entry-body">
 
-            <a href="#">
+            <a href="{{ path('blog_single', {slug: document.slug}) }}">
                 <h1 class="title">{{ document.title }}</h1>
             </a>
             {% if document.leadText is not empty %}
@@ -41,7 +41,7 @@
         <div class="entry-meta">
 
             <ul>
-                <li><a href="single-post.html"><span class="post-format">Permalink</span></a></li>
+                <li><a href="{{ path('blog_single', {slug: document.slug}) }}"><span class="post-format">Permalink</span></a></li>
                 <li><span class="title">Posted:</span><br> <a href="#">{{ document.createdAt|date("M d, Y") }}</a></li>
                 {#<li><span class="title">Tags:</span> <a href="#">Standard</a></li>#}
                 {#<li><span class="title">Comments:</span> <a href="#">3</a></li>#}

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+{% block head_bottom %}
+    {{ parent() }}
+    <meta name="description" content="{{ document.metaDescription }}">
+    <meta name="keywords" content="{{ document.metaKeywords }}">
+{% endblock head_bottom %}
+{% block title %}
+    {{ document.metaTitle }} -
+    {{ parent() }}
+{% endblock title %}
+{% block body %}
+<header class="page-header">
+    <h1 class="page-title">{{ document.title }}</h1>
+</header><!-- end .page-header -->
+    {{ document.body|raw }}
+{% endblock %}

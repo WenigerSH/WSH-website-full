@@ -1,5 +1,5 @@
 {
-    "hash": "eb18f40a36aa1eff96972032d24cb196",
+    "hash": "55b87ee51e20eed830590eee910194f8",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1778,12 +1778,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "0c810e840512ad313eaeb8d552fc349427239507"
+                "reference": "0b60fa5f7030801a9bab69918491525e469cd368"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/0c810e840512ad313eaeb8d552fc349427239507",
-                "reference": "0c810e840512ad313eaeb8d552fc349427239507",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/0b60fa5f7030801a9bab69918491525e469cd368",
+                "reference": "0b60fa5f7030801a9bab69918491525e469cd368",
                 "shasum": ""
             },
             "require": {
@@ -1844,7 +1844,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-03-27 14:24:12"
+            "time": "2013-03-27 15:35:36"
         },
         {
             "name": "sonata-project/block-bundle",
