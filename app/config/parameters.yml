@@ -14,3 +14,4 @@ parameters:
     database_path: null
     settings_file: %kernel.root_dir%/config/settings.yml
     imagine_cache_dir: /uploads/cache
+    knp_paginator.template.pagination: WshWebsiteBundle:Pagination:pagination.html.twig

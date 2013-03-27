@@ -954,7 +954,7 @@ jQuery(document).ready(function($) {
 
 			$map.gMap({
 				address: 'Inkubator Starter, Lęborska 3b, Gdańsk, Poland',
-				zoom: 6,
+				zoom: 4,
 				markers: [
 					{ 'address' : ' Starter, ul. Lęborska 3b, Gdańsk, Poland' }
 				]

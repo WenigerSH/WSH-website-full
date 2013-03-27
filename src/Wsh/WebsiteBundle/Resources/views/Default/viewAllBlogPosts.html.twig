@@ -1,4 +1,8 @@
 {% extends '::base.html.twig' %}
+{% block title %}
+    Blog
+    {{ parent() }}
+{% endblock %}
 {% block body %}
     <header class="page-header">
 
@@ -43,13 +47,15 @@
 
     </article><!-- end .entry -->
     {% endfor %}
-    <ul class="pagination">
-        <li class="next"><a href="#">&larr; Next</a></li>
-        <li><a href="#">1</a></li>
-        <li class="current">2</li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li class="prev"><a href="#">Previous &rarr;</a></li>
+        {{ knp_pagination_render(pagination) }}
+
+        {#<ul class="pagination">#}
+        {#<li class="next"><a href="#">&larr; Next</a></li>#}
+        {#<li><a href="#">1</a></li>#}
+        {#<li class="current">2</li>#}
+        {#<li><a href="#">3</a></li>#}
+        {#<li><a href="#">4</a></li>#}
+        {#<li class="prev"><a href="#">Previous &rarr;</a></li>#}
     </ul>
 
     </section><!-- end #main -->
