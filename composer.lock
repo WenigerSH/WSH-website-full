@@ -1,5 +1,5 @@
 {
-    "hash": "b2d0b8b496cc9d3491a51e47d982340e",
+    "hash": "4ae85ceb5131430e92d01eb522251d8f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -586,6 +586,85 @@
                 "orm"
             ],
             "time": "2013-03-24 20:43:58"
+        },
+        {
+            "name": "gedmo/doctrine-extensions",
+            "version": "v2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
+                "reference": "v2.3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/v2.3.5",
+                "reference": "v2.3.5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": ">=2.2,<2.5-dev",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/dbal": ">=2.2",
+                "doctrine/mongodb": "1.0.1",
+                "doctrine/mongodb-odm": "1.0.0-BETA7",
+                "doctrine/orm": ">=2.2",
+                "symfony/yaml": "2.*"
+            },
+            "suggest": {
+                "doctrine/dbal": ">=2.3.2",
+                "doctrine/mongodb": ">=1.0.1",
+                "doctrine/mongodb-odm": ">=1.0.0-BETA7",
+                "doctrine/orm": ">=2.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gedmo": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Gediminas Morkevicius",
+                    "email": "gediminas.morkevicius@gmail.com"
+                },
+                {
+                    "name": "Gustavo Falco",
+                    "email": "comfortablynumb84@gmail.com"
+                }
+            ],
+            "description": "Doctrine2 behavioral extensions",
+            "homepage": "http://gediminasm.org/",
+            "keywords": [
+                "Blameable",
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree",
+                "uploadable"
+            ],
+            "time": "2013-03-05 06:32:22"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1191,6 +1270,60 @@
             "time": "2013-02-13 18:06:51"
         },
         {
+            "name": "nekland/feed-bundle",
+            "version": "dev-master",
+            "target-dir": "Nekland/Bundle/FeedBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nekland/FeedBundle.git",
+                "reference": "8b13157b576a38d38d4d794f3748d8ddb0c1e1b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nekland/FeedBundle/zipball/8b13157b576a38d38d4d794f3748d8ddb0c1e1b9",
+                "reference": "8b13157b576a38d38d4d794f3748d8ddb0c1e1b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Nekland\\Bundle\\FeedBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yohan GIARELLI",
+                    "email": "yohan@giarel.li",
+                    "homepage": "http://yohan.giarel.li"
+                },
+                {
+                    "name": "Maxime Veber",
+                    "email": "nek.dev+github@gmail.com",
+                    "homepage": "http://www.nekland.fr"
+                },
+                {
+                    "name": "Nekland Community",
+                    "homepage": "https://github.com/Nekland/FeedBundle/contributors"
+                }
+            ],
+            "description": "Feed manager integration for symfony",
+            "homepage": "https://github.com/Nekland/FeedBundle",
+            "keywords": [
+                "atom",
+                "feed",
+                "symfony",
+                "xml"
+            ],
+            "time": "2013-03-04 01:08:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.1.0",
             "source": {
@@ -1563,12 +1696,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCacheBundle.git",
-                "reference": "48f1c56e7e05f24e32c854f9013c5b082e323642"
+                "reference": "2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/48f1c56e7e05f24e32c854f9013c5b082e323642",
-                "reference": "48f1c56e7e05f24e32c854f9013c5b082e323642",
+                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/2.1.2",
+                "reference": "2.1.2",
                 "shasum": ""
             },
             "require": {
@@ -1844,6 +1977,68 @@
                 "sonata"
             ],
             "time": "2013-03-01 17:24:02"
+        },
+        {
+            "name": "stof/doctrine-extensions-bundle",
+            "version": "dev-master",
+            "target-dir": "Stof/DoctrineExtensionsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stof/StofDoctrineExtensionsBundle.git",
+                "reference": "18957db1734b2fb6a391e77a3be75b9d8e2008fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/18957db1734b2fb6a391e77a3be75b9d8e2008fb",
+                "reference": "18957db1734b2fb6a391e77a3be75b9d8e2008fb",
+                "shasum": ""
+            },
+            "require": {
+                "gedmo/doctrine-extensions": "2.3.*",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.1,<2.3-dev"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/mongodb-odm-bundle": "2.1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Stof\\DoctrineExtensionsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Integration of the gedmo/doctrine-extensions with Symfony2",
+            "homepage": "https://github.com/stof/StofDoctrineExtensionsBundle",
+            "keywords": [
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree"
+            ],
+            "time": "2013-02-26 02:07:55"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2279,7 +2474,9 @@
         "sonata-project/block-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
-        "sonata-project/intl-bundle": 20
+        "sonata-project/intl-bundle": 20,
+        "nekland/feed-bundle": 20,
+        "stof/doctrine-extensions-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
