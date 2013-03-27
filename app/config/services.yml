@@ -1,0 +1,32 @@
+services:
+    sonata.admin.page:
+        class:        Wsh\WebsiteBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: CMS, label: Pages, label_translator_strategy: sonata.admin.label.strategy.native }
+        arguments:    [null, Wsh\WebsiteBundle\Entity\Page, SonataAdminBundle:CRUD]
+
+    sonata.admin.blog_post:
+        class:        Wsh\WebsiteBundle\Admin\BlogPostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: CMS, label: Blog posts, label_translator_strategy: sonata.admin.label.strategy.native }
+        arguments:    [null, Wsh\WebsiteBundle\Entity\BlogPost, SonataAdminBundle:CRUD]
+        calls:
+            - [setSettings, [@settings]]
+
+    sonata.admin.pushbox:
+        class:        Wsh\WebsiteBundle\Admin\PushBoxAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: CMS, label: Push boxes, label_translator_strategy: sonata.admin.label.strategy.native }
+        arguments:    [null, Wsh\WebsiteBundle\Entity\PushBox, SonataAdminBundle:CRUD]
+        calls:
+            - [setSettings, [@settings]]
+
+    sonata.admin.static_html:
+        class:        Wsh\WebsiteBundle\Admin\StaticHtmlAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: CMS, label: Static HTMLs, label_translator_strategy: sonata.admin.label.strategy.native }
+        arguments:    [null, Wsh\WebsiteBundle\Entity\StaticHtml, SonataAdminBundle:CRUD]
+
+    settings:
+        class: Wsh\WebsiteBundle\Helper\SettingsManager
+        arguments: [%settings_file%]

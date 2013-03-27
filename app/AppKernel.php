@@ -26,6 +26,9 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

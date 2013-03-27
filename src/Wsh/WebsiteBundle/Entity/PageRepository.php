@@ -3,6 +3,7 @@
 namespace Wsh\WebsiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Wsh\WebsiteBundle\Entity;
 
 /**
  * PageRepository
@@ -12,25 +13,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class PageRepository extends EntityRepository
 {
-    public function fetchLatestMessagesFromGms($limit = 3, $userType = 'models')
-    {
-        $qb = $this->_em->createQueryBuilder();
-        $qb->select('n')
-            ->from('Weniger\GmsBundle\Entity\MessageFromGms', 'n')
-            ->where("n.isPublished = true")
-            ->andWhere('n.recipients in (:recipients)')
-            ->orderBy('n.createdAt', 'DESC');
-        $qb->setParameter('recipients', array('all', $userType));
-        $query = $qb->getQuery();
-        $query->setMaxResults($limit);
-        return $query->getResult();
-    }
-
     public function fetchLatestPublishedBlogPosts($limit = 3)
     {
         $qb = $this->_em->createQueryBuilder();
         $qb->select('n')
-            ->from('Weniger\GmsBundle\Entity\BlogPost', 'n')
+            ->from('WshWebsiteBundle:BlogPost', 'n')
             ->where("n.isPublished = true")
             ->orderBy('n.createdAt', 'DESC');
         $query = $qb->getQuery();
@@ -40,7 +27,7 @@ class PageRepository extends EntityRepository
 
     public function getPagesCount()
     {
-        $dql = 'SELECT COUNT(p.id) FROM WenigerGmsBundle:Page p';
+        $dql = 'SELECT COUNT(p.id) FROM Page p';
         $query = $this->_em->createQuery($dql);
         return $query->getSingleScalarResult();
     }
@@ -48,7 +35,7 @@ class PageRepository extends EntityRepository
 
     public function getPostsCount()
     {
-        $dql = 'SELECT COUNT(p.id) FROM WenigerGmsBundle:BlogPost p';
+        $dql = 'SELECT COUNT(p.id) FROM BlogPost p';
         $query = $this->_em->createQuery($dql);
         return $query->getSingleScalarResult();
     }
@@ -56,7 +43,7 @@ class PageRepository extends EntityRepository
     public function getNextBlogPostFor(BlogPost $post) {
         $qb = $this->_em->createQueryBuilder();
         $qb->select('n')
-            ->from('Weniger\GmsBundle\Entity\BlogPost', 'n')
+            ->from('Wsh\WebsiteBundle\Entity\BlogPost', 'n')
             ->where("n.isPublished = true")
             ->andWhere('n.createdAt >= :currentCreated')
             ->andWhere('n.id > :current_id')
@@ -74,7 +61,7 @@ class PageRepository extends EntityRepository
     public function getPreviousBlogPostFor(BlogPost $post) {
         $qb = $this->_em->createQueryBuilder();
         $qb->select('n')
-            ->from('Weniger\GmsBundle\Entity\BlogPost', 'n')
+            ->from('Wsh\WebsiteBundle\Entity\BlogPost', 'n')
             ->where('n.createdAt <= :current_createdAt')
             ->andWhere('n.id < :current_id')
             ->orderBy('n.createdAt', 'DESC')
@@ -85,6 +72,4 @@ class PageRepository extends EntityRepository
         $query->setMaxResults(1);
         return $query->getOneOrNullResult();
     }
-
-
 }

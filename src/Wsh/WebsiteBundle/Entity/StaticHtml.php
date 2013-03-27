@@ -10,7 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * StaticHtml
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Weniger\GmsBundle\Entity\StaticHtmlRepository")
+ * @ORM\Entity(repositoryClass="Wsh\WebsiteBundle\Entity\StaticHtmlRepository")
  */
 class StaticHtml
 {

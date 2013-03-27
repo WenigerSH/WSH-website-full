@@ -19,47 +19,32 @@ class BlogPostAdmin extends Admin
 	
 		// description for photo (if added)
 		$help = "";
+        $var = $this->getSubject()->getPath();
 		if($this->getSubject()->getPath() != null) {
 			$help = 'Adding new photo will overwrite current photo<br><img style="width: 100px;" src="/' . $this->getSubject()->getWebPath() . '">';
 		}
 
-        $rawCategories = $this->settings->get('blog.categories');
-        $enCategories = array_map(
-            function ($data) {
-                return $data['en_US'];
-            },
-            $rawCategories
-        );
-        $categories = array_combine($enCategories, $enCategories);
+        $categories = $this->settings->get('blog.categories');
 
 		$formMapper
             ->with('General')
-                ->add('title', 'translatable_field', array(
-                    'field' => 'title',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\BlogPostTranslation',
+                ->add('title', null, array(
                 ))
-                ->add('leadText', 'translatable_field', array(
-                    'field' => 'leadText',
-                    'widget' => 'textarea',
+                ->add('leadText', null, array(
+                    //'widget' => 'textarea',
                     'help'  => 'HTML allowed',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\BlogPostTranslation',
                 ))
                 ->add('leadPhoto', 'file', array(
 					'required' => false,
 					'help' => $help
 					))
-                ->add('body', 'translatable_field', array(
-                    'field' => 'body',
-                    'help' => '<img style="width: 100px;" src="/' . $this->getSubject()->getWebPath() . '">',
-                    'widget' => 'ckeditor',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\BlogPostTranslation',
+                ->add('body', null, array(
+                    //'widget' => 'ckeditor',
                 ))
-                ->add('quote', 'translatable_field', array(
-                    'field' => 'quote',
-                    'widget' => 'textarea',
+                ->add('quote', null, array(
+                    //'widget' => 'textarea',
                     'required' => false,
                     'help'  => 'Optional, HTML not allowed',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\BlogPostTranslation',
                 ))
                 ->add('isPublished', null, array('required' => false))
                 ->add('author', null,  array('required' => true))
@@ -95,14 +80,14 @@ class BlogPostAdmin extends Admin
             ->add('createdAt')
             ->add('isPublished')
             ->add('author')
-            ->add('slug')
+            ->add('slug');
 
             // add custom action links
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'preview' => array('template' => 'WenigerGmsBundle:Admin:blogPostPreviewListAction.html.twig'),
-                )
-            ));
+//            ->add('_action', 'actions', array(
+//                'actions' => array(
+//                    'preview' => array('template' => 'WenigerGmsBundle:Admin:blogPostPreviewListAction.html.twig'),
+//                )
+//            ));
     }
 
     public function validate(ErrorElement $errorElement, $object)

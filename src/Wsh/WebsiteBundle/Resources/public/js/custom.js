@@ -154,10 +154,10 @@ jQuery(document).ready(function($) {
 
 	(function() {
 
-		var $fancyboxItems = $('.single-image, .image-gallery, .iframe, .inline-html');
+		var $fancyboxItems = $('.single-image, .image-gallery, .iframe, .inline-html, .entry-image-link');
 
 		// Images
-		$('.single-image, .image-gallery').fancybox({
+		$('.single-image, .image-gallery, .entry-image-link').fancybox({
 			type        : 'image',
 			openEffect  : 'fade',
 			closeEffect	: 'fade',

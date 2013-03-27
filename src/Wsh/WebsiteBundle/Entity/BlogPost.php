@@ -10,7 +10,7 @@ use Nekland\Bundle\FeedBundle\Item\ItemInterface;
  * Blog post entity
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Weniger\GmsBundle\Entity\PageRepository")
+ * @ORM\Entity(repositoryClass="Wsh\WebsiteBundle\Entity\PageRepository")
  */
 class BlogPost extends PageAbstract implements ItemInterface
 {

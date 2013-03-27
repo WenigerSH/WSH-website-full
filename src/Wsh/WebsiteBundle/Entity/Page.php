@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table()
  * @ORM\HasLifecycleCallbacks
- * @ORM\Entity(repositoryClass="Weniger\GmsBundle\Entity\PageRepository")
+ * @ORM\Entity(repositoryClass="Wsh\WebsiteBundle\Entity\PageRepository")
  */
 class Page extends PageAbstract
 {
@@ -83,7 +83,7 @@ class Page extends PageAbstract
 
 	public function __toString()
 	{
-		return $this->getTitle();
+        return 'Page "'.$this->getTitle().'"';
 	}
 
 }

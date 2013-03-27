@@ -15,14 +15,11 @@ class PageAdmin extends Admin
     {
         $formMapper
             ->with('General')
-                ->add('title', 'translatable_field', array(
-                    'field' => 'title',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\PageTranslation',
+                ->add('title', null, array(
+                    'label' => 'Give yourself some title!',
                 ))
-                ->add('body', 'translatable_field', array(
-                    'field' => 'body',
-                    'widget' => 'ckeditor',
-                    'personal_translation' => 'Weniger\GmsBundle\Entity\Translation\PageTranslation',
+                ->add('body', null, array(
+                    //'widget' => 'ckeditor',
                 ))
                 ->add('isPublished', null, array(
                     'required' => false,
@@ -56,14 +53,14 @@ class PageAdmin extends Admin
             ->add('createdAt')
             ->add('isPublished')
             ->add('isSystemic')
-            ->add('slug')
+            ->add('slug');
 
             // add custom action links
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'preview' => array('template' => 'WenigerGmsBundle:Admin:pagePreviewListAction.html.twig'),
-                )
-            ));
+//            ->add('_action', 'actions', array(
+//                'actions' => array(
+//                    //'preview' => array('template' => 'WenigerGmsBundle:Admin:pagePreviewListAction.html.twig'),
+//                )
+//            ));
     }
 
     public function validate(ErrorElement $errorElement, $object)

@@ -1,0 +1,35 @@
+<aside id="sidebar">
+
+    <div class="widget">
+
+        <h6 class="widget-title">Blog Categories</h6>
+
+        <ul class="categories">
+            {% for category in categories %}
+            <li><a href="{{ path('blog_all', {'category': category}) }}">{{ category }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div><!-- end .widget -->
+
+    <div class="widget">
+
+        <h6 class="widget-title">Latest entries</h6>
+
+        <ul class="categories">
+            {% for post in latest %}
+            <li><a href="{{ path('blog_single', {'slug': post.slug}) }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div><!-- end .widget -->
+
+    <div class="widget">
+
+        <h6 class="widget-title">Our blog</h6>
+
+        <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+    </div><!-- end .widget -->
+
+</aside><!-- end #sidebar -->
