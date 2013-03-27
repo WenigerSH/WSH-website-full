@@ -5,8 +5,9 @@
         <h6 class="widget-title">Blog Categories</h6>
 
         <ul class="categories">
+            <li><a href="{{ path('blog', {'category': 'all'}) }}">All posts</a></li>
             {% for category in categories %}
-            <li><a href="{{ path('blog_all', {'category': category}) }}">{{ category }}</a></li>
+                <li><a href="{{ path('blog', {'category': category}) }}">{{ category }}</a></li>
             {% endfor %}
         </ul>
 

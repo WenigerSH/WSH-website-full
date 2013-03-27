@@ -71,17 +71,6 @@ class DefaultController extends Controller
 
     /**
      * Just a static page rendering action
-     * 
-     * @Route("/blog", name="blog")
-     * @Template()
-     */
-    public function blogAction()
-    {
-    	return array();
-    }
-
-    /**
-     * Just a static page rendering action
      *
      * @Route("/contact", name="contact")
      * @Template()
@@ -220,7 +209,7 @@ class DefaultController extends Controller
     /**
      * View blog post listing
      *
-     * @Route("/editorial/{category}/{page}", name="blog_all", defaults={"page": 1, "category": "all"}, requirements={"page": "\d+"})
+     * @Route("/blog/{category}/{page}", name="blog", defaults={"page": 1, "category": "all"}, requirements={"page": "\d+"})
      * @Template()
      */
     public function viewAllBlogPostsAction($category, $page, Request $request)
