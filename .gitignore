@@ -9,3 +9,4 @@
 .DS_Store
 .idea
 /web/css/*
+/app/config/parameters.yml
