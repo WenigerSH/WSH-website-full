@@ -55,7 +55,14 @@ class DefaultController extends Controller
      */
     public function clientsAction()
     {
-    	return array();
+        //fetch clients
+        $repo = $this->getDoctrine()->getRepository('Wsh\WebsiteBundle\Entity\Client');
+        $countries  = $repo->fetchClientsCountries();
+        $clients    = $repo->fetchPublishedClients();
+    	return array(
+            'clients'   => $clients,
+            'countries' => $countries
+        );
     }
 
     /**

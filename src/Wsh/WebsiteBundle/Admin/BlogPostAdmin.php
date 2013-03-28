@@ -48,12 +48,11 @@ class BlogPostAdmin extends Admin
                 ))
                 ->add('isPublished', null, array('required' => false))
                 ->add('author', null,  array('required' => true))
+                ->add('category', 'choice', array('choices' => $categories))
             ->end()
             ->with('Settings')
-                 ->add('isFeatured', null, array('help' => 'Featured posts are better exposed on site', 'required' => false))
-                  // categories are edited in settings.yml
-                 ->add('category', 'choice', array('choices' => $categories))
-            ->with('Meta data')
+            ->add('isFeatured', null, array('help' => 'Featured posts are better exposed on site', 'required' => false))
+            // categories are edited in settings.yml
                 ->add('metaTitle', null, array('help' => 'If left empty then document title will be used', 'required' => false))
                 ->add('metaDescription', null, array('help' => 'If left empty then document body (first 255 characters) will be used', 'required' => false))
                 ->add('metaKeywords')

@@ -16,6 +16,10 @@ _sonata_admin:
     type: sonata_admin
     prefix: /admin
 
+sonata_admin_dashboard:
+    pattern: /admin
+    defaults: { _controller: SonataAdminBundle:Core:dashboard }
+
 #try to fetch a page if all above don't match
 page:
   pattern: /{slug}
