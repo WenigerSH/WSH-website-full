@@ -41,7 +41,37 @@
             <!-- end! client description modal div -->
         </article><!-- end .one-fourth (Altered) -->
     {% endfor %}
+        <article class="one-fourth{% if (clients|length + 1) % 4 == 0 %} last{% endif %}" data-categories="">
 
+            <a href="#add-new" class="inline-html" title="Become a partner of WENIGER">
+                <img src="{{ asset('bundles/wshwebsite/img/client_logos/add_new.png') }}" alt="Become a partner">
+            </a>
+
+            <a href="#" class="project-meta">
+                <h5 class="title">Become a partner</h5>
+                <span class="categories">&nbsp;</span>
+            </a>
+
+            <!-- client description -->
+            <div style="display:none">
+                <div id="add-new">
+                    <div class="one-third last">
+                        <p>
+                            <strong>WENIGER</strong> would gladly welcome you as our partner.
+                        </p>
+                        <p>
+                            If your business has a demand for our <a href="{{ path("services") }}">services</a> or you
+                            have any other business concept we are open for any inquiry.
+                        </p>
+                        <ul class="arrow">
+                            <li><a href="{{ path("contact") }}">Contact <strong>WENIGER</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end! client description modal div -->
+
+        </article><!-- end .one-fourth (End) -->
     </section><!-- end #portfolio-items -->
 
 {% endblock %}
