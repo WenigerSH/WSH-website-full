@@ -1,5 +1,5 @@
 {
-    "hash": "55b87ee51e20eed830590eee910194f8",
+    "hash": "1fc228eec7a4e3676866e2948cda36d0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1778,12 +1778,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "0b60fa5f7030801a9bab69918491525e469cd368"
+                "reference": "325508ca99e45428db20828985857a5f6eb8f911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/0b60fa5f7030801a9bab69918491525e469cd368",
-                "reference": "0b60fa5f7030801a9bab69918491525e469cd368",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/325508ca99e45428db20828985857a5f6eb8f911",
+                "reference": "325508ca99e45428db20828985857a5f6eb8f911",
                 "shasum": ""
             },
             "require": {
@@ -1844,7 +1844,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-03-27 15:35:36"
+            "time": "2013-03-27 18:08:43"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -1982,12 +1982,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "78f7c08d33f9eaf8a89c7ba3d1cabc7257c67577"
+                "reference": "923a9d26f8fbd9305e915259659a024c30bdd312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/78f7c08d33f9eaf8a89c7ba3d1cabc7257c67577",
-                "reference": "78f7c08d33f9eaf8a89c7ba3d1cabc7257c67577",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/923a9d26f8fbd9305e915259659a024c30bdd312",
+                "reference": "923a9d26f8fbd9305e915259659a024c30bdd312",
                 "shasum": ""
             },
             "require": {
@@ -2034,7 +2034,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2013-03-11 17:35:17"
+            "time": "2013-03-27 18:08:39"
         },
         {
             "name": "sonata-project/exporter",
@@ -2088,67 +2088,6 @@
                 "xls"
             ],
             "time": "2013-03-04 14:20:46"
-        },
-        {
-            "name": "sonata-project/intl-bundle",
-            "version": "dev-master",
-            "target-dir": "Sonata/IntlBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataIntlBundle.git",
-                "reference": "3e5b49415afe8343803b52e8f0ffea8ca38c2bd3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataIntlBundle/zipball/3e5b49415afe8343803b52e8f0ffea8ca38c2bd3",
-                "reference": "3e5b49415afe8343803b52e8f0ffea8ca38c2bd3",
-                "shasum": ""
-            },
-            "require": {
-                "ext-intl": "*",
-                "symfony/dependency-injection": "2.*",
-                "symfony/http-kernel": "2.*",
-                "symfony/locale": "2.*",
-                "symfony/templating": "2.*",
-                "twig/twig": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.0": "2.0.x-dev",
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sonata\\IntlBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataIntlBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataIntlBundle",
-            "homepage": "http://sonata-project.org/bundles/intl",
-            "keywords": [
-                "date",
-                "intl",
-                "number",
-                "sonata",
-                "time"
-            ],
-            "time": "2013-03-05 21:40:19"
         },
         {
             "name": "sonata-project/jquery-bundle",
@@ -2694,7 +2633,6 @@
         "sonata-project/block-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
-        "sonata-project/intl-bundle": 20,
         "nekland/feed-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
         "liip/imagine-bundle": 20,

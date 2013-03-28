@@ -42,6 +42,17 @@ class Builder extends ContainerAware
             'route' => 'contact',
         ));
         $menu['Contact']->setLinkAttribute('data-description', 'Fancy us?');
+
+        $request = $this->container->get('request');
+        $routeName = $request->get('_route');
+        $reqUri = $request->getRequestUri();
+
+
+        foreach ($menu as $menuItemName => $item) {
+            if (strstr($reqUri, $item->getUri())) {
+                $menu->getChild($menuItemName)->setCurrent(true);
+            }
+        }
         return $menu;
     }
 }
