@@ -43,6 +43,7 @@
             <ul>
                 <li><a href="{{ path('blog_single', {slug: document.slug}) }}"><span class="post-format">Permalink</span></a></li>
                 <li><span class="title">Posted:</span><br> <a href="#">{{ document.createdAt|date("M d, Y") }}</a></li>
+                <li><span class="title">Author:</span><br> <a href="{{ path('team') }}">{{ document.author }}</a></li>
                 {#<li><span class="title">Tags:</span> <a href="#">Standard</a></li>#}
                 {#<li><span class="title">Comments:</span> <a href="#">3</a></li>#}
             </ul>
