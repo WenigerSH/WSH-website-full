@@ -957,7 +957,8 @@ jQuery(document).ready(function($) {
 				zoom: 4,
 				markers: [
 					{ 'address' : ' Starter, ul. Lęborska 3b, Gdańsk, Poland' }
-				]
+				],
+				scrollwheel: false
 			});
 
 		}
