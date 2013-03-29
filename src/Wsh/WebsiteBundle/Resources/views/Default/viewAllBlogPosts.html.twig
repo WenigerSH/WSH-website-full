@@ -11,53 +11,56 @@
     </header><!-- end .page-header -->
 
     <section id="main">
-    {% for post in pagination %}
-    <article class="entry clearfix">
+    {% if pagination in not empty %}
+        {% for post in pagination %}
+        <article class="entry clearfix">
 
-        {% if post.getWebPath is not empty %}
-            <a href="{{ path('blog_single', {slug: post.slug}) }}" title="{{ post.title }}" class="entry-image">
-                <img src="/{{ post.getWebPath }}" alt="Picture for blog entry {{ post.title }}" class="entry-image">
-            </a>
-        {% endif %}
-
-        <div class="entry-body">
-
-            <a href="{{ path('blog_single', {slug: post.slug}) }}">
-                <h1 class="title">{{ post.title }}</h1>
-            </a>
-
-            {% if post.leadText is not empty %}
-            <p>
-                {{ post.leadText }}
-            </p>
+            {% if post.getWebPath is not empty %}
+                <a href="{{ path('blog_single', {slug: post.slug}) }}" title="{{ post.title }}" class="entry-image">
+                    <img src="/{{ post.getWebPath }}" alt="Picture for blog entry {{ post.title }}" class="entry-image">
+                </a>
             {% endif %}
 
-        </div><!-- end .entry-body -->
+            <div class="entry-body">
 
-        <div class="entry-meta">
+                <a href="{{ path('blog_single', {slug: post.slug}) }}">
+                    <h1 class="title">{{ post.title }}</h1>
+                </a>
 
-            <ul>
-                <li><a href="{{ path('blog_single', {slug: post.slug}) }}"><span class="post-format ">Permalink</span></a></li>
-                <li><span class="title">Posted:</span> <a href="#">{{ post.createdAt | date("M d, Y") }}</a></li>
-                {#<li><span class="title">Tags:</span> <a href="#">Standard</a></li>#}
-                {#<li><span class="title">Comments:</span> <a href="#">3</a></li>#}
-            </ul>
+                {% if post.leadText is not empty %}
+                <p>
+                    {{ post.leadText }}
+                </p>
+                {% endif %}
 
-        </div><!-- end .entry-meta -->
+            </div><!-- end .entry-body -->
 
-    </article><!-- end .entry -->
-    {% endfor %}
-        {{ knp_pagination_render(pagination) }}
+            <div class="entry-meta">
 
-        {#<ul class="pagination">#}
-        {#<li class="next"><a href="#">&larr; Next</a></li>#}
-        {#<li><a href="#">1</a></li>#}
-        {#<li class="current">2</li>#}
-        {#<li><a href="#">3</a></li>#}
-        {#<li><a href="#">4</a></li>#}
-        {#<li class="prev"><a href="#">Previous &rarr;</a></li>#}
-    </ul>
+                <ul>
+                    <li><a href="{{ path('blog_single', {slug: post.slug}) }}"><span class="post-format ">Permalink</span></a></li>
+                    <li><span class="title">Posted:</span> <a href="#">{{ post.createdAt | date("M d, Y") }}</a></li>
+                    {#<li><span class="title">Tags:</span> <a href="#">Standard</a></li>#}
+                    {#<li><span class="title">Comments:</span> <a href="#">3</a></li>#}
+                </ul>
 
+            </div><!-- end .entry-meta -->
+
+        </article><!-- end .entry -->
+        {% endfor %}
+            {{ knp_pagination_render(pagination) }}
+
+            {#<ul class="pagination">#}
+            {#<li class="next"><a href="#">&larr; Next</a></li>#}
+            {#<li><a href="#">1</a></li>#}
+            {#<li class="current">2</li>#}
+            {#<li><a href="#">3</a></li>#}
+            {#<li><a href="#">4</a></li>#}
+            {#<li class="prev"><a href="#">Previous &rarr;</a></li>#}
+        </ul>
+    {% else %}
+        <p class="notice"><strong>Notice</strong> - Sorry, we didn't write anything fancy yet.</p>
+    {% endif %}
     </section><!-- end #main -->
     {% render controller('WshWebsiteBundle:Default:renderBlogSideBar') %}
 {% endblock %}
