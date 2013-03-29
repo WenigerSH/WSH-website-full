@@ -11,7 +11,7 @@
     </header><!-- end .page-header -->
 
     <section id="main">
-    {% if pagination %}
+    {% if pagination|length > 0 %}
         {% for post in pagination %}
         <article class="entry clearfix">
 
