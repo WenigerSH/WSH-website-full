@@ -1097,6 +1097,8 @@ jQuery(document).ready(function($) {
 			// Hide any previous response text and show loader
 			$response.hide().html( $loader ).show();
 
+            // disable form for now
+            $form.children("input[type=submit], button").attr("disabled", "disabled").attr("value", "Sending...");
 			// Make AJAX request
 			$.post($form.attr("action"), $form.serialize(), function( data ) {
 				// Show response message
@@ -1115,14 +1117,16 @@ jQuery(document).ready(function($) {
 					$('html, body').animate({ scrollTop : bottomPosition + 50 });
 
 				// If form has been sent succesfully, clear it
-                        if( data.status == 1 )
+                if( data.status == 1 ) {
 					$form.find('input:not(input[type="submit"]), textarea, select').val('').attr( 'checked', false );
-                // remove the form
-                $form.animate({
-                    height: 'toggle'
-                }, 850, function() {
-                  $(this).hide();
-                });
+                    // remove the form
+                    $form.animate({
+                        height: 'toggle'
+                    }, 850, function() {
+                        $(this).hide();
+                    });
+                }
+
 
 			});
 
