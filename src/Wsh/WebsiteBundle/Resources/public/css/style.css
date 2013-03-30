@@ -2379,6 +2379,14 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 
 .contact-form, .comments-form { max-width: 100%; }
 
+.contact-form #form > div {
+	display: inline-block;
+}
+
+.contact-form #form > div:first-child {
+	margin-right: 6px;
+}
+
 .contact-form { margin: 0 -20px 0 0; }
 
 	.contact-form .input-block, .comments-form .input-block {
