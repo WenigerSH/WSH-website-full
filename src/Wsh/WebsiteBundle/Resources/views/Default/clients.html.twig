@@ -25,8 +25,8 @@
 
         <article class="one-fourth{% if loop.index % 4 == 0 %} last{% endif %}" data-categories="{{ client.country|lower }}">
 
-            <a href="#client-{{ client.id }}" class="inline-html" title="{{ client.name }} from {{ client.city }}, {{ client.country }}">
-                <img src="/{{ client.getWebPath }}" alt="{{ client.name }} logo">
+            <a href="#client-{{ client.id }}" class="single-image inline-html" title="{{ client.name }} from {{ client.city }}, {{ client.country }}">
+                <img src="{{ client.getWebPath | imagine_filter('client_logo') }}" alt="{{ client.name }} logo">
             </a>
 
             <a href="#client-{{ client.id }}" class="project-meta">
