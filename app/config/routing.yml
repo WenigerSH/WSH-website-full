@@ -20,13 +20,13 @@ sonata_admin_dashboard:
     pattern: /admin
     defaults: { _controller: SonataAdminBundle:Core:dashboard }
 
+_imagine:
+    resource: .
+    type:     imagine
+
 #try to fetch a page if all above don't match
 page:
   pattern: /{slug}
   defaults: { _controller: WshWebsiteBundle:Default:viewPage }
   requirements:
     slug: \w.+
-
-_imagine:
-    resource: .
-    type:     imagine

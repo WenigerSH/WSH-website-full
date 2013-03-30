@@ -99,8 +99,19 @@ sonata_admin:
             - { position: left, type: sonata.admin.block.admin_list }
 
 liip_imagine:
+    driver:               gd
+    data_root:             %kernel.root_dir%/../web
+    cache_mkdir_mode:     0777
+    cache_prefix:         %imagine_cache_dir%
+    cache:                web_path
+    cache_clearer:        true
+    data_loader:          filesystem
+    controller_action:    liip_imagine.controller:filterAction
+    formats:              []
     filter_sets:
         homepage_blog_thumb:
-            quality: 75
             filters:
                 thumbnail: { size: [120, 90], mode: outbound }
+        team_member_photo:
+            filters:
+                thumbnail: { size: [200, 200], mode: outbound }
