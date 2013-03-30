@@ -4,7 +4,6 @@ app/cache/*
 app/logs/*
 build/
 vendor/
-bin/
 composer.phar
 .DS_Store
 .idea
