@@ -2216,6 +2216,18 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 /*	Portfolio
 /* ---------------------------------------------------------------------- */
 
+#portfolio-items article a.client-image,
+#portfolio-items article a.become-a-partner {
+	width: 220px;
+	height: 140px;
+	display: table-cell;
+	vertical-align: middle;
+}	
+
+#portfolio-items article a.become-a-partner .zoom {
+	display: none;
+}
+
 #portfolio-items-filter {
 	float: right;
 	margin: -65px 0 0;

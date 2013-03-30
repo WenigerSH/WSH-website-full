@@ -210,12 +210,6 @@ jQuery(document).ready(function($) {
 
 				var $this = $(this);
 
-				if( !$this.hasClass('none') && !$this.children('.entry-image').length && !$this.parents('.image-gallery-slider').length )
-					$this.css({
-						'height' : $this.children().height() !== 0 ? $this.children().height() : 'auto',
-						'width'  : $this.children().width()  !== 0 ? $this.children().width()  : 'auto'
-					});
-
 				$this.append('<span class="zoom">&nbsp;</span>');
 
 			});
