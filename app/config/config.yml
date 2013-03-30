@@ -113,7 +113,13 @@ liip_imagine:
     filter_sets:
         homepage_blog_thumb:
             filters:
-                thumbnail: { size: [120, 90], mode: outbound }
+                thumbnail: { size: [220, 76], mode: outbound }
+        blog_list_thumb:
+            filters:
+                thumbnail: { size: [680, 234], mode: outbound }
         team_member_photo:
             filters:
                 thumbnail: { size: [200, 200], mode: outbound }
+        client_logo:
+            filters:
+                thumbnail: { size: [220, 140], mode: inset }
