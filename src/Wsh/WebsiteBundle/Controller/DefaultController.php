@@ -101,6 +101,10 @@ class DefaultController extends Controller
             if($form->isValid()) {
                 $data = $form->getData();
 
+                // check again spam,
+                if (!empty($data['spam-check'])) {
+                    throw new \Exception('You dirty SPAMer! I banish you in the name of flying spaghetti monster!');
+                }
                 // sent the form
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact from WenigerSH.com')
