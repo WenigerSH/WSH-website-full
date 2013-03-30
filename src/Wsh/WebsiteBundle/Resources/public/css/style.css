@@ -1616,8 +1616,9 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 			.ss-slider.hide-bottom-buttons .pagination-container .next { bottom: 71px; }
 		
 			.ss-slider .pagination-container a:hover, .ss-slider.show-content-onhover:hover .pagination-container a:hover {
-				background-color: rgba(241, 90, 35, 1);
-				filter: alpha(opacity=100) !important; /* Fallback for old IE */
+				background-color: rgba(116, 117, 119); /* Fallback for old IE */
+				filter: alpha(opacity=80) !important; /* Fallback for old IE */
+				background-color: rgba(116, 117, 119, 0.8);
 			}
 			
 			.ss-slider .pagination-container.center a {		
