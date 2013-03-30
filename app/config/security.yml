@@ -23,15 +23,19 @@ security:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
         secured_area:
-            pattern:    ^/admin
-            anonymous: ~
-            http_basic:
-                realm: Log-in to WSH website admin area
+            pattern:    ^/admin*
+            anonymous: false
+            form_login:
+                provider: in_memory
+                default_target_path: /admin
+                login_path: login
+                check_path: /admin/login_check
+            logout:
+                path: /admin/logout
+                target: /
+
 
     access_control:
+        - { path: ^/admin/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin*, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }

@@ -81,6 +81,8 @@ sonata_block:
         sonata.block.service.text: ~
         sonata.block.service.rss: ~
 sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
     title:      WSH website admin
     title_logo: /bundles/sonataadmin/logo_title.png
     templates:

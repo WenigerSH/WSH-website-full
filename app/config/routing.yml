@@ -7,6 +7,13 @@ sonata_page_cache:
     resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
     prefix: /
 
+login_check:
+    pattern: /admin/login_check
+
+logout:
+    pattern: /admin/logout
+
+
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /admin
