@@ -3274,6 +3274,8 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 
+	#portfolio-items article a.client-image, #portfolio-items article a.become-a-partner { width: 420px; }
+
 	/* -------------------------------------------------- */
 	/*	Basic Elements & Classes
 	/* -------------------------------------------------- */
