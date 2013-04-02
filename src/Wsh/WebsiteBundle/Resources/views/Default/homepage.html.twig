@@ -76,7 +76,7 @@
             <li>
                 {% if blogPost.getWebPath is not empty %}
                 <a href="{{ path('blog_single', {slug: blogPost.slug}) }}">
-                    <img src="/{{ blogPost.getWebPath }}" alt="{{ blogPost.title }} lead photo" class="entry-image">
+                    <img src="{{ blogPost.getWebPath | imagine_filter('homepage_blog_thumb') }}" alt="{{ blogPost.title }} lead photo" class="entry-image">
                 </a>
                 {% endif %}
                 <div class="entry-meta">
