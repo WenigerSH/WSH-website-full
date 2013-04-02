@@ -1,28 +1,37 @@
 {% extends '::base.html.twig' %}
 
 {% block title %}
-    Login
+    Login to back-end
 {% endblock %}
 
 
 {% block body %}
 {# src/Acme/SecurityBundle/Resources/views/Security/login.html.twig #}
 {% if error %}
-    <div>{{ error.message }}</div>
+    <p class="error"><strong>Error</strong> - {{ error.message }} </p>
 {% endif %}
 
-<form action="{{ path('login_check') }}" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <div class="one-third">
+        <div class="infobox">
+            <h3>Login to back-end.</h3>
+            <form action="{{ path('login_check') }}" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" />
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="_password" />
 
-    {#
-        If you want to control the URL the user is redirected to on success (more details below)
-        <input type="hidden" name="_target_path" value="/account" />
-    #}
-
-    <button type="submit">login</button>
-</form>
+                {#
+                    If you want to control the URL the user is redirected to on success (more details below)
+                    <input type="hidden" name="_target_path" value="/account" />
+                #}
+                <div style="text-align: left; margin: 6px -2px;">
+                    <button type="submit">login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="two-third last">
+        <img src="{{asset('/bundles/wshwebsite/img/keep-calm-and-stay-weniger.png') }}">
+    </div>
 {% endblock %}
