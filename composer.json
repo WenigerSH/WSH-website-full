@@ -30,8 +30,8 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "liip/imagine-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
-        "symfony/property-access": "v2.2.0"
-
+        "symfony/property-access": "v2.2.0",
+        "egeloen/ckeditor-bundle": "2.*"
     },
     "scripts": {
         "post-install-cmd": [

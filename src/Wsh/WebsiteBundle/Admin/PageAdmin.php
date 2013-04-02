@@ -18,7 +18,7 @@ class PageAdmin extends Admin
                 ->add('title', null, array(
                     'label' => 'Give yourself some title!',
                 ))
-                ->add('body', null, array(
+                ->add('body', 'ckeditor', array(
                     //'widget' => 'ckeditor',
                 ))
                 ->add('isPublished', null, array(
@@ -27,8 +27,8 @@ class PageAdmin extends Admin
                         'class' => 'published'
                     )
                 ))
-            ->end()
-                ->with('Meta data')
+                ->end()
+                ->with('Meta-data')
                 ->add('metaTitle', null, array('help' => 'If left empty then document title will be used', 'required' => false))
                 ->add('metaDescription', null, array('help' => 'If left empty then document body (first 255 characters) will be used', 'required' => false))
                 ->add('metaKeywords')

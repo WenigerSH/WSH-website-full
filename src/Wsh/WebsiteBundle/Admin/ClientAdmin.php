@@ -32,7 +32,7 @@ class ClientAdmin extends Admin
                 ->add('city', null, array(
                     'label' => 'City of client HQ'
                 ))
-                ->add('description', null, array(
+                ->add('description', 'ckeditor', array(
                     'required' => false,
                 ))
                 ->add('logo', 'file', array(

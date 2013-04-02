@@ -19,20 +19,6 @@ services:
             - { name: sonata.admin, manager_type: orm, group: CMS, label: Client, label_translator_strategy: sonata.admin.label.strategy.native }
         arguments:    [null, Wsh\WebsiteBundle\Entity\Client, SonataAdminBundle:CRUD]
 
-    sonata.admin.pushbox:
-        class:        Wsh\WebsiteBundle\Admin\PushBoxAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: CMS, label: Push boxes, label_translator_strategy: sonata.admin.label.strategy.native }
-        arguments:    [null, Wsh\WebsiteBundle\Entity\PushBox, SonataAdminBundle:CRUD]
-        calls:
-            - [setSettings, [@settings]]
-
-    sonata.admin.static_html:
-        class:        Wsh\WebsiteBundle\Admin\StaticHtmlAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: CMS, label: Static HTMLs, label_translator_strategy: sonata.admin.label.strategy.native }
-        arguments:    [null, Wsh\WebsiteBundle\Entity\StaticHtml, SonataAdminBundle:CRUD]
-
     settings:
         class: Wsh\WebsiteBundle\Helper\SettingsManager
         arguments: [%settings_file%]

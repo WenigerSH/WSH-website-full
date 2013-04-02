@@ -38,7 +38,7 @@ class BlogPostAdmin extends Admin
 					'required' => false,
 					'help' => $help
 					))
-                ->add('body', null, array(
+                ->add('body', 'ckeditor', array(
                     //'widget' => 'ckeditor',
                 ))
                 ->add('quote', null, array(
@@ -49,9 +49,9 @@ class BlogPostAdmin extends Admin
                 ->add('isPublished', null, array('required' => false))
                 ->add('author', null,  array('required' => true))
                 ->add('category', 'choice', array('choices' => $categories))
+                            ->add('isFeatured', null, array('help' => 'Featured posts are better exposed on site', 'required' => false))
             ->end()
-            ->with('Settings')
-            ->add('isFeatured', null, array('help' => 'Featured posts are better exposed on site', 'required' => false))
+            ->with('Meta-data')
             // categories are edited in settings.yml
                 ->add('metaTitle', null, array('help' => 'If left empty then document title will be used', 'required' => false))
                 ->add('metaDescription', null, array('help' => 'If left empty then document body (first 255 characters) will be used', 'required' => false))
