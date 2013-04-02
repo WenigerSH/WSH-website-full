@@ -10,16 +10,15 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
 
-        $menu->addChild('Values', array(
-            'route' => 'values',
-        ));
-        $menu['Values']->setLinkAttribute('data-description', 'House rules');
-
         $menu->addChild('Services', array(
             'route' => 'services',
         ));
         $menu['Services']->setLinkAttribute('data-description', 'What we do');
 
+        $menu->addChild('Values', array(
+            'route' => 'values',
+        ));
+        $menu['Values']->setLinkAttribute('data-description', 'House rules');
 
         $menu->addChild('Clients', array(
             'route' => 'clients', 
