@@ -1,6 +1,11 @@
 {% extends '::base.html.twig' %}
 {% block title %}
-    {{ document.title }} published on Weniger Software House Blog
+    {{ document.metaTitle }} published on Weniger Software House Blog
+{% endblock %}
+{% block head_bottom %}
+    <meta name="author" content="{{document.author}} from Weniger Software House">
+    <meta name="description" content="{{ document.metaDescription }}">
+    <meta name="keywords" content="{{ document.metaKeywords }}">
 {% endblock %}
 {% block body %}
 <header class="page-header">

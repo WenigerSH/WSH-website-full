@@ -2,6 +2,10 @@
 {% block title %}
     Welcome to Weniger Software House
 {% endblock title %}
+{% block head_bottom %}
+    {{ parent() }}
+    <meta name="description" content="Weniger Software House is small software company that develops web & mobile applications using modern technologies and passion">
+    <meta name="keywords" content="software development, mobile development, software house, software production">{% endblock %}
 {% block body %}
     <h2 class="slogan align-center">                
         We bring joy and better quality of life<br>by making tasks and processes sexier and smarter using software technology.
