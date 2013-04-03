@@ -3809,3 +3809,19 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 		.social-links li:nth-child(8n) { margin-right: 15px; }
 
 }
+/* ---------------------------------------------------------------------- */
+/*	Services
+/* ---------------------------------------------------------------------- */
+.service-header img {
+	width: 15%;
+	margin-left: -5px;
+}
+/* ---------------------------------------------------------------------- */
+/*	Error page
+/* ---------------------------------------------------------------------- */
+.error-page {
+	text-align: center;
+}
+.error-page img {
+	width: 30%;
+}
