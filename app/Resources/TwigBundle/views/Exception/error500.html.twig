@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Not found error occured
+{% endblock %}
+
+
+{% block body %}
+    <header class="page-header">
+
+        <h1 class="page-title">Exception (500) error occured</h1>
+        
+    </header>
+
+    <div class="error-page">
+        <img src="{{asset('/bundles/wshwebsite/img/keep-calm-and-stay-weniger.png') }}">
+        <br>
+        <div class="infobox">
+            <a class="button large" href="{{ path('homepage') }}">Panic button!</a> 
+        </div>
+    </div>
+{% endblock %}
