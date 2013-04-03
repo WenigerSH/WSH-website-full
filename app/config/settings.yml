@@ -1,6 +1,6 @@
 blog:
   pagination:
-    limitPerPage: 1
+    limitPerPage: 5
   categories:
     news: News
     tech: Tech
