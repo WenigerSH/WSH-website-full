@@ -3,6 +3,10 @@
     Blog
     {{ parent() }}
 {% endblock %}
+{% block head_bottom %}
+    {{ parent() }}
+    <meta name="description" content="Weniger Software House blog">
+{% endblock %}
 {% block body %}
     <header class="page-header">
 
