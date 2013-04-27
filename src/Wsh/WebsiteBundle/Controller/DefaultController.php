@@ -113,7 +113,11 @@ class DefaultController extends Controller
                     ->setBody(
                         $this->renderView(
                             'WshWebsiteBundle:Default:email.txt.twig',
-                            array('message' => $data['message'])
+                            array(
+                                'message'   => $data['message'],
+                                'email'     => $data['email'],
+                                'name'      => $data['name']
+                                )
                         )
                     )
                 ;
