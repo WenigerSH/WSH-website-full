@@ -1122,7 +1122,7 @@ jQuery(document).ready(function($) {
                 }
 
 
-			}).fail(alert("There has been error sending message. Please contact us using e-mail at contact@wenigersh.com."));
+			});
 
 			// Cancel default action
 			e.preventDefault();
