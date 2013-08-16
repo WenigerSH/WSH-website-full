@@ -20,10 +20,10 @@ class Builder extends ContainerAware
         ));
         $menu['Values']->setLinkAttribute('data-description', 'House rules');
 
-        $menu->addChild('Clients', array(
-            'route' => 'clients', 
-        ));
-        $menu['Clients']->setLinkAttribute('data-description', 'We call them partners');    
+        // $menu->addChild('Clients', array(
+        //     'route' => 'clients', 
+        // ));
+        // $menu['Clients']->setLinkAttribute('data-description', 'We call them partners');    
 
 
         $menu->addChild('Team', array(
@@ -32,10 +32,10 @@ class Builder extends ContainerAware
         $menu['Team']->setLinkAttribute('data-description', 'Our family members');
 
 
-        $menu->addChild('Blog', array(
-            'route' => 'blog',
-        ));
-        $menu['Blog']->setLinkAttribute('data-description', 'More about us');
+        // $menu->addChild('Blog', array(
+        //     'route' => 'blog',
+        // ));
+        // $menu['Blog']->setLinkAttribute('data-description', 'More about us');
 
         $menu->addChild('Contact', array(
             'route' => 'contact',
