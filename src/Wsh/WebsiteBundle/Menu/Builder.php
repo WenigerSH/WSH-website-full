@@ -32,10 +32,10 @@ class Builder extends ContainerAware
         $menu['Team']->setLinkAttribute('data-description', 'Our family members');
 
 
-        // $menu->addChild('Blog', array(
-        //     'route' => 'blog',
-        // ));
-        // $menu['Blog']->setLinkAttribute('data-description', 'More about us');
+        $menu->addChild('Blog', array(
+             'route' => 'blog',
+        ));
+        $menu['Blog']->setLinkAttribute('data-description', 'More about us');
 
         $menu->addChild('Contact', array(
             'route' => 'contact',
