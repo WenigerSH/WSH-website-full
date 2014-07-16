@@ -3830,3 +3830,31 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 img.contact-photo {
 	width: 200px;
 }
+/* ---------------------------------------------------------------------- */
+/*	EU logo
+/* ---------------------------------------------------------------------- */
+
+.footer {
+	width: 586px;
+}
+
+.stay-connected {
+	width: 140px;
+}
+
+.eu-projects {
+	float: left;
+	width: 173px;
+}
+
+@media only screen and (max-width: 959px) {
+	.footer,
+	.stay-connected {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.eu-projects {
+		margin-top: 20px;
+	}
+}
